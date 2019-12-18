@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="lelab.Views.MenuPage"
+             Title="Menu">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical"
+                     VerticalOptions="FillAndExpand"
+                     Spacing="0">
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         Orientation="Vertical"
+                         BackgroundColor="#518faa"
+                         VerticalOptions="Start">
+                <Image Source="lab_logo.png" 
+                       HeightRequest="100"
+                       Aspect="AspectFit"
+                       HorizontalOptions="Center"
+                       Margin="0,35,0,0" />
+                <Label Text="LE LAB" 
+                       Margin="0,10,0,20"
+                       TextColor="White"
+                       HorizontalTextAlignment="Center"
+                       FontSize="30">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="HelveticaNeue-Thin" />
+                            <On Platform="Android" Value="HelveticaNeue-Thin.ttf#HelveticaNeue-Thin" />
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+            <Image Source="lab_separator.png"
+                   Aspect="AspectFill" />
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         Orientation="Vertical"
+                         Margin="30,0,30,0"
+                         VerticalOptions="FillAndExpand">
+                <Button Text="COMPTEUR"
+                        Margin="0,20,0,0"
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="#c1ab24"
+                        Clicked="CounterButtonClicked" />
+                <Button Text="TABS"
+                        Margin="0,10,0,0"
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="#a4881c"
+                        Clicked="TabsButtonClicked" />
+                <Button Text="LISTE"
+                        Margin="0,10,0,0"
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="#c60e3c"
+                        Clicked="ListeButtonClicked" />
+                <Button Text="NOUVEAUTÉS"
+                        Margin="0,10,0,0"
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="#518faa"
+                        Clicked="NewsButtonClicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

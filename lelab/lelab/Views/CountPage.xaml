@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="lelab.Views.CountPage" 
+             Title="Compteur">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical"
+                     VerticalOptions="FillAndExpand"
+                     Spacing="0">
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         Orientation="Vertical"
+                         BackgroundColor="#518faa">
+                <Label x:Name="lblCount" 
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       FontSize="80"
+                       Margin="0,40"
+                       Text="0">
+                    <Label.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS" Value="HelveticaNeue-Thin" />
+                            <On Platform="Android" Value="HelveticaNeue-Thin.ttf#HelveticaNeue-Thin" />
+                        </OnPlatform>
+                    </Label.FontFamily>
+                </Label>
+            </StackLayout>
+            <Image Source="lab_separator.png"
+                   Aspect="AspectFill" />
+            <Frame HasShadow="False" 
+                   VerticalOptions="FillAndExpand" 
+                   HorizontalOptions="FillAndExpand">
+                <Button x:Name="btnCount" 
+                        Margin="30,0,30,0"
+                        VerticalOptions="Center"
+                        Text="Compter"
+                        Clicked="CountButtonClick"/>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
